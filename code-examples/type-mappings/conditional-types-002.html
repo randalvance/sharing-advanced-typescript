@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <div id="loader">Loading...</div>
+  <div id="typescript-editor" style="height: 550px" />
+  <script>
+    initialCode =
+`type StringSettings = {
+    allowUppercase: boolean;
+};
+
+type OtherSettings = {
+    someFlag: boolean;
+}
+
+type Settings<T> = T extends string ? StringSettings : OtherSettings;
+
+const strSetting: Settings<string> = {
+    allowUppercase: true
+};
+const otherSettings: Settings<number> = {
+    someFlag: true
+};`
+
+    sandboxFontSize = 22;
+  </script>
+  <script async src="../typescript-sandbox.js"></script>
+</html>

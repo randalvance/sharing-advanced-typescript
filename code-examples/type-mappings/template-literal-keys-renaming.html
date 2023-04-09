@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <div id="loader">Loading...</div>
+  <div id="typescript-editor" style="height: 550px" />
+  <script>
+    initialCode =
+`type User = {
+    Name: string;
+    Username: string;
+};
+
+type UserCamelCased = {
+    [K in keyof User as Uncapitalize<K>]: User[K];
+}
+
+const user: UserCamelCased = {
+    name: "Randal",
+    username: "randal",
+}`
+
+    sandboxFontSize = 24;
+  </script>
+  <script async src="../typescript-sandbox.js"></script>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <div id="loader">Loading...</div>
+  <div id="typescript-editor" style="height: 550px" />
+  <script>
+    initialCode =
+`type RetType<T> = T extends (...args: any[]) => infer R ? R : never;
+type ParamType<T> = T extends (...args: infer P) => any ? P : never;
+
+function doSomething(arg1: string, arg2: number): boolean {
+    return false;
+}
+
+type Ret1 = RetType<typeof doSomething>;
+type Params1 = ParamType<typeof doSomething>;
+`
+
+    sandboxFontSize = 24;
+  </script>
+  <script async src="../typescript-sandbox.js"></script>
+</html>
