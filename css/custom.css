@@ -1,0 +1,11 @@
+.editor {
+  width: 100%;
+  border: 1px solid black;
+  height: 100vh;
+  background: white;
+}
+
+.reveal code {
+  font-family: Consolas, 'Courier New', Courier, monospace;
+  color: #800000;
+}
