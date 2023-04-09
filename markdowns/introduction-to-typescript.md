@@ -6,7 +6,10 @@
     1. Compiler <!-- .element: class="fragment" data-fragment-index="4" -->
     1. Language Service <!-- .element: class="fragment" data-fragment-index="5" -->
 Note:
-Do something here
+1. Programming Language - It is the language itself.
+1. Type Checker - A tool that checks the types of your code and reports errors.
+1. Compiler - A tool that compiles your code into JavaScript.
+1. Language Service - A background service that provides language features such as autocomplete, go to definition, find all references, etc. It is used by editors and IDEs to provide these features.
 ---
 <!-- .slide: data-background="black" -->
 <iframe class="editor" src="code-examples/example.html"></iframe>
