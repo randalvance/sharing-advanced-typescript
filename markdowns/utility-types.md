@@ -5,7 +5,7 @@ Constructs a type with all properties of `Type` set to optional.
 Note:
 I frequently use this to when creating a new object and I only want to specify some of the values of that object, and the rest will get default values.
 ---
-<iframe class="editor" src="https://www.typescriptlang.org/play?#code/JYOwLgpgTgZghgYwgAgArQM4HsTIN4BQyyMwUGYAcnALYQBcyFUoA5gNxHIA2cF1dRszadiAEziQA8jABCZMAAtGAEUkRRyOGLFQIGDELAsQHAgF8CBGAFcQCMMBzIEe9enI4AFDChYajB7YIACU+Fx6YDZQuITExKTkVLQMJH40AHSJ-CkANFzEvDmCaf4ZRcl0+fHIEtJyCsqlmXUQMvJQStXx2rr6hs0ZvXoG3ZaWQA"></iframe>
+<!-- .slide: data-background-iframe="https://www.typescriptlang.org/play?#code/JYOwLgpgTgZghgYwgAgArQM4HsTIN4BQyyMwUGYAcnALYQBcyFUoA5gNxHIA2cF1dRszadiAEziQA8jABCZMAAtGAEUkRRyOGLFQIGDELAsQHAgF8CBGAFcQCMMBzIEe9enI4AFDChYajB7YIACU+Fx6YDZQuITExKTkVLQMJH40AHSJ-CkANFzEvDmCaf4ZRcl0+fHIEtJyCsqlmXUQMvJQStXx2rr6hs0ZvXoG3ZaWQA" -->
 vvv
 ```typescript
 interface Person {

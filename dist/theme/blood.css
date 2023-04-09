@@ -37,6 +37,7 @@ section.has-light-background, section.has-light-background h1, section.has-light
   --r-heading3-size: 1.55em;
   --r-heading4-size: 1em;
   --r-code-font: monospace;
+  --r-code-color: #800000;
   --r-link-color: #a23;
   --r-link-color-dark: #6a1520;
   --r-link-color-hover: #dd5566;
@@ -222,8 +223,10 @@ section.has-light-background, section.has-light-background h1, section.has-light
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
 }
 
-.reveal code {
+.reveal code:not(.hljs) {
+  color: var(--r-code-color);
   font-family: var(--r-code-font);
+  font-weight: bold;
   text-transform: none;
   tab-size: 2;
 }

@@ -38,14 +38,20 @@ getLoaderScript.onload = () => {
     }
 
     // Create a sandbox and embed it into the the div #monaco-editor-embed
+    // Sandbox config: https://github.com/microsoft/TypeScript-Website/blob/83d16f62cbf65ff6941da3d4e3679064406a8069/packages/sandbox/src/index.ts
     const sandboxConfig = {
       text: initialCode,
-      compilerOptions: {},
+      compilerOptions,
       domID: 'typescript-editor',
+      // Monaco options: https://microsoft.github.io/monaco-editor/docs.html#interfaces/editor.IEditorOptions.html
+      monacoSettings: {
+        fontSize: 30,
+      }
     }
 
     const sandbox = sandboxFactory.createTypeScriptSandbox(sandboxConfig, main, window.ts)
-    sandbox.editor.focus()
+    // sandbox.editor.focus()
+    main.editor.setTheme("sandbox-dark");
   })
 }
 
