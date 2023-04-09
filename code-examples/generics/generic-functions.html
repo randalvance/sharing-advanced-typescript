@@ -7,11 +7,15 @@
   <div id="typescript-editor" style="height: 550px" />
   <script>
     initialCode =
-`function doSomething(value) {
-    console.log(value.length);
+`function logValue<T>(value: T) {
+    console.log(value);
 }
 
-doSomething('hello');
+logValue<string>("Test");
+logValue<number>("Test");
+
+logValue("Test");
+logValue(100);;
 `
 
     sandboxFontSize = 24;

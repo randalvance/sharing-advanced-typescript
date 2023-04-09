@@ -7,12 +7,14 @@
   <div id="typescript-editor" style="height: 550px" />
   <script>
     initialCode =
-`function doSomething(value) {
-    console.log(value.length);
+`interface Result<T = string> {
+    value: T;
 }
 
-doSomething('hello');
-`
+const result1: Result<string> = { value: "Hello" };
+const result2: Result<number> = { value: 123 };
+const result3: Result = { value: "Hello" };
+const result4: Result = { value: 123 };`
 
     sandboxFontSize = 24;
   </script>

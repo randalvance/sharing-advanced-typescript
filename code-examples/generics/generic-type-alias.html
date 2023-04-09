@@ -7,12 +7,20 @@
   <div id="typescript-editor" style="height: 550px" />
   <script>
     initialCode =
-`function doSomething(value) {
-    console.log(value.length);
+`interface LinkedNode<T> {
+    next?: LinkedNode<T>;
+    value: T;
 }
 
-doSomething('hello');
-`
+function getLast<T>(node: LinkedNode<T>): T {
+    return node.next ? getLast(node.next) : node.value;
+}
+
+const node: LinkedNode<string> = {
+    value: "test"
+};
+
+const value = getLast(node);`
 
     sandboxFontSize = 24;
   </script>

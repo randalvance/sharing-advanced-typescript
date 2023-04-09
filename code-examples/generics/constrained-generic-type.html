@@ -7,12 +7,20 @@
   <div id="typescript-editor" style="height: 550px" />
   <script>
     initialCode =
-`function doSomething(value) {
-    console.log(value.length);
+`interface Creature {
+    type: string;
 }
 
-doSomething('hello');
-`
+interface Person extends Creature {
+    networth: number;
+}
+interface Dog extends Creature {
+    loyaltyScore: number;
+}
+
+function printType<T extends Creature>(creature: T) {
+    console.log(creature.type);
+}`
 
     sandboxFontSize = 24;
   </script>
