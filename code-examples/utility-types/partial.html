@@ -34,7 +34,21 @@
         _tsWorker,
         sandboxFactory
       ) => {
-        const initialCode = `interface Dog {
+        const initialCode =
+`interface Person {
+  firstName: string;
+  lastName: string;
+  dateOfBirth: Date;
+  address: string;
+}
+
+function createPerson(from: Person) {
+  return {
+    firstName: from.firstName,
+    lastName: from.lastName,
+    dateOfBirth: from.dateOfBirth,
+    address: from.address,
+  }
 }
 `
 

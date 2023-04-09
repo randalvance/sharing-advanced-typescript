@@ -5,7 +5,7 @@
   background: white;
 }
 
-.reveal code {
+.reveal code:not(.hljs) {
   font-family: Consolas, 'Courier New', Courier, monospace;
   color: #800000;
 }
