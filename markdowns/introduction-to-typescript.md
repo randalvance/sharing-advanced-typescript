@@ -87,18 +87,45 @@ Typescript can infer the type of a variable from its value.
 ## Object Types
 <iframe class="editor" style="height: 600px" data-src="code-examples/intro/object-types.html"></iframe>
 Note:
-1. Show the inferred type of the object.
-1. Show that only members of the object are in autocomplete.
-1. Show that accessing members not in the object causes an error.
-1. Create a type for the object named `User` and annotate the user object.
-    1. Show it first using a type.
-    1. Show it using an interface.
+Show the inferred type of the object.
 
+Show that only members of the object are in autocomplete.
+
+Show that accessing members not in the object causes an error.
+
+Create a type for the object named `User` and annotate the user object.
+1. Show it first using a type.
+1. Show it using an interface.
+
+---
+## Array Types
+<iframe class="editor" style="height: 600px" data-src="code-examples/intro/array-types.html"></iframe>
+
+Note:
+Show annotating the array type.
 ---
 ## Function Types
 <iframe class="editor" style="height: 600px" data-src="code-examples/intro/function-types.html"></iframe>
 Note:
-Also show adding the function type in a `type`.
+Show annotating the function type.
+
+Show adding the function type in a `type`.
+vvv
+```typescript
+type StringTransformer = (input: string) => string;
+
+const transformString: StringTransformer => string = (input) => {
+  return input + ' transformed';
+};
+```
+
+---
+## Tuple Types
+<iframe class="editor" style="height: 600px" data-src="code-examples/intro/tuple-types.html"></iframe>
+Note:
+Tuples are fixed type array and each element can have a different type.
+
+They are commonly used as return values of a function so you can destructure it. Example is the return value of `useState` hook in react.
 
 ---
 ## Type vs Interface

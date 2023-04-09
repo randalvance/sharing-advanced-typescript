@@ -1,5 +1,12 @@
 # Working with Types
 ---
+## Optional Properties
+<iframe class="editor" style="height: 600px" data-src="code-examples/working-with-types/optional-properties.html"></iframe>
+Note:
+1. We use the `?` to make a property optional.
+1. Using the `?` and indicating `| undefined` has different behavior. The latter needs to be explicitly assigned to undefined.
+
+---
 ## Unions
 <iframe class="editor" style="height: 600px" data-src="code-examples/working-with-types/unions-001.html"></iframe>
 Note:
@@ -9,10 +16,20 @@ Note:
 
 ## Unions (Part 2)
 <iframe class="editor" style="height: 600px" data-src="code-examples/working-with-types/unions-002.html"></iframe>
+
+Note:
+Doing a union of objects.
 ---
 
 ## Unions (Part 3)
 <iframe class="editor" style="height: 600px" data-src="code-examples/working-with-types/unions-003.html"></iframe>
+
+Note:
+A union where both types have a property but different type.
+
+---
+## Unions (Arrays)
+<iframe class="editor" style="height: 600px" data-src="code-examples/working-with-types/unions-arrays.html"></iframe>
 
 ---
 ## Intersections
@@ -81,13 +98,63 @@ What happens if you put an extra else block, the type will be `never`.
 Note:
 1. Discriminated union is a type of union where each member has a common property that can be used to narrow down the type (called a discriminant).
 1. Demonstrate using `switch` statement.
----
-## Type Guards
 
 ---
-## Optional Properties
-<iframe class="editor" style="height: 600px" data-src="code-examples/working-with-types/optional-properties.html"></iframe>
+## Type Predicates
+<iframe class="editor" style="height: 600px" data-src="code-examples/working-with-types/type-predicates.html"></iframe>
+vvv
+```typescript
+function isNumberOrString(value: string | number) : value is string {
+    return typeof value === 'string';
+}
+
+function doSomething(value: string | number) {
+    if (isNumberOrString(value)) {
+        console.log(value);
+    } else {
+        console.log(value);
+    }
+}
+
+```
 Note:
-1. We use the `?` to make a property optional.
-1. Using the `?` and indicating `| undefined` has different behavior. The latter needs to be explicitly assigned to undefined.
+You can define special functions with custom logic to narrow down the type of a variable.
+
+These are called type predicates.
+
+The following example uses calls a function that accepts a parameter of type `string | number` and returns a boolean.
+Because it simply returns a boolean, typescript has no idea what the type of the variable is after the function returned.
+
+---
+## Type Assertions
+<iframe class="editor" style="height: 600px" data-src="code-examples/working-with-types/type-assertions.html"></iframe>
+Note:
+There are cases where you want to convert another type to a specific type. You can use the `as` keyword to do so.
+For example, the return value of `JSON.parse` is of type `any`. We can convert it to an interface so that we can have type-safety.
+
+You can only convert to another type if it is a subtype of the original type. With the exception of any and unknown which are considered top-level types. You can convert those to any type.
+
+Show an example of converting a string to a number. You can bypass that by adding `as unknown` or `as any`.
+
+---
+## The `any` Type
+<iframe class="editor" style="height: 600px" data-src="code-examples/working-with-types/any-type.html"></iframe>
+
+Note:
+It is considered a top-level type. Any value can be assigned to it.
+
+It is the default type if you did not specified a type annotation and it cannot be infered from the value assigned to it.
+
+It will essentially turn-off typescript's type checking.
+
+---
+## The `unknown` Type
+<iframe class="editor" style="height: 600px" data-src="code-examples/working-with-types/any-type.html"></iframe>
+
+Note:
+If you don't know a type, you can use the `unknown` type. It is also a top-level type.
+
+You can also assign any value to `unknown`. But it is safer because you cannot access any member without first explicitly asserting the type.
+
+Another way you can access a member of an `unknown` if you use `typeof` or `instanceof`.
 
