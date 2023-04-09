@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <div id="loader">Loading...</div>
+  <div id="typescript-editor" style="height: 550px" />
+  <script>
+    initialCode =
+`interface Dog {
+	type: 'dog',
+	loyaltyScore: number;
+}
+interface Person {
+	type: 'human',
+	networth: number;
+}
+type Creature = Dog | Person;
+
+function announceNetworthOrLoyaltyScore(creature: Creature) {
+    if (creature.type === 'human') {
+        console.log("The human's networth is " + creature.networth);
+    } else {
+        console.log("The dog's loyalty score is " + creature.loyaltyScore);
+    }
+}`
+
+    compilerOptions = {
+      noImplicitAny: false,
+    }
+
+    sandboxFontSize = 22;
+  </script>
+  <script async src="../typescript-sandbox.js"></script>
+</html>

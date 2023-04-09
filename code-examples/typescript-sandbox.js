@@ -41,17 +41,19 @@ getLoaderScript.onload = () => {
     // Sandbox config: https://github.com/microsoft/TypeScript-Website/blob/83d16f62cbf65ff6941da3d4e3679064406a8069/packages/sandbox/src/index.ts
     const sandboxConfig = {
       text: initialCode,
-      compilerOptions,
+      compilerOptions: window.compilerOptions ? window.compilerOptions : {},
       domID: 'typescript-editor',
       // Monaco options: https://microsoft.github.io/monaco-editor/docs.html#interfaces/editor.IEditorOptions.html
       monacoSettings: {
-        fontSize: 30,
+        fontSize: window.sandboxFontSize ? window.sandboxFontSize : 30,
       }
     }
 
     const sandbox = sandboxFactory.createTypeScriptSandbox(sandboxConfig, main, window.ts)
     // sandbox.editor.focus()
     main.editor.setTheme("sandbox-dark");
+
+    window.sandbox = sandbox;
   })
 }
 

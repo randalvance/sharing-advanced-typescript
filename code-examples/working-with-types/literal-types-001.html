@@ -4,15 +4,13 @@
     <meta charset="utf-8" />
   </head>
   <div id="loader">Loading...</div>
-  <div id="typescript-editor" style="height: 800px" />
+  <div id="typescript-editor" style="height: 550px" />
   <script>
     const initialCode =
-`function doSomething(someObject) {
-}`
+`let answer: "yes" = "yes";
+answer = "no";`
 
-    compilerOptions = {
-      noImplicitAny: false,
-    }
+    sandboxFontSize = 24;
   </script>
   <script async src="../typescript-sandbox.js"></script>
 </html>

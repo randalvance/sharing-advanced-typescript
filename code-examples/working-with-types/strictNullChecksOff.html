@@ -4,15 +4,18 @@
     <meta charset="utf-8" />
   </head>
   <div id="loader">Loading...</div>
-  <div id="typescript-editor" style="height: 800px" />
+  <div id="typescript-editor" style="height: 150px" />
   <script>
-    const initialCode =
-`function doSomething(someObject) {
-}`
+    initialCode = `let nullableString: string = null;
+let undefinableString: string = undefined;`
 
     compilerOptions = {
       noImplicitAny: false,
+      strictNullChecks: false,
     }
+
+
+    sandboxFontSize = 20;
   </script>
   <script async src="../typescript-sandbox.js"></script>
 </html>

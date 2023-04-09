@@ -6,9 +6,14 @@
   <div id="loader">Loading...</div>
   <div id="typescript-editor" style="height: 800px" />
   <script>
-    const initialCode =
-`function doSomething(someObject) {
-}`
+    initialCode =
+`let animal = "Dog";
+
+let grade = 100;
+
+let isHappy = true;
+
+let nameOrCode = Math.random() > 0.5 ? "Randal" : 777;`
 
     compilerOptions = {
       noImplicitAny: false,

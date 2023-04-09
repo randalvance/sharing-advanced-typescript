@@ -53,6 +53,20 @@ Note:
     tsc --watch
     ```
 ---
+## tsconfig
+1. When you initialize a typescript project, a `tsconfig.json` file is created.
+1. This file contains the configuration for the typescript compiler, and which files to include for type checking.
+1. You can find all possible configs in this [link](https://www.typescriptlang.org/tsconfig).
+    ```json
+    {
+      "include": ["src/**/*", "tests/**/*"],
+      "compilerOptions": {
+        "noImplicitAny": true,
+        "strictNullChecks": true
+      }
+    }
+    ```
+---
 ## Basic Types
 1. `number`
 1. `string`
@@ -64,3 +78,45 @@ Note:
 1. `any`
 1. `unknown`
 1. `never`
+---
+## Type Inference
+Typescript can infer the type of a variable from its value.
+<iframe class="editor" style="height: 300px" data-src="code-examples/intro/type-inference.html"></iframe>
+
+---
+## Object Types
+<iframe class="editor" style="height: 600px" data-src="code-examples/intro/object-types.html"></iframe>
+Note:
+1. Show the inferred type of the object.
+1. Show that only members of the object are in autocomplete.
+1. Show that accessing members not in the object causes an error.
+1. Create a type for the object named `User` and annotate the user object.
+    1. Show it first using a type.
+    1. Show it using an interface.
+
+---
+## Function Types
+<iframe class="editor" style="height: 600px" data-src="code-examples/intro/function-types.html"></iframe>
+Note:
+Also show adding the function type in a `type`.
+
+---
+## Type vs Interface
+1. Use an interface when:
+    1. Define a new type or shape of an object.
+    1. Inherit from another interface.
+    1. Have a class implement an interface.
+    1. Declaration merging
+1. Use a type alias when:
+    1. Define a union type, tuple type, intersection type, function type
+    1. When you derived a type from another type (type mapping)
+Note:
+Declaration merging will be demonstrated later.
+
+---
+## Structural Typing
+<iframe class="editor" style="height: 600px" data-src="code-examples/intro/structural-typing.html"></iframe>
+Note:
+You can assign an object with extra properties (as long as you don't explicitly typed the object).
+
+Structural and duck typing are similar concepts, but structural typing is checked by the type system, while duck typing is checked at runtime.

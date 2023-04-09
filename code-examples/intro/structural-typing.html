@@ -6,9 +6,13 @@
   <div id="loader">Loading...</div>
   <div id="typescript-editor" style="height: 800px" />
   <script>
-    const initialCode =
-`function doSomething(someObject) {
-}`
+    initialCode =
+`type User = {
+	name: string;
+}
+
+const john = { name: "John", age: 25 };
+const user: User = john;`
 
     compilerOptions = {
       noImplicitAny: false,

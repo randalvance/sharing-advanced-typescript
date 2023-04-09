@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <div id="loader">Loading...</div>
+  <div id="typescript-editor" style="height: 550px" />
+  <script>
+    initialCode =
+`interface HasName {
+    name: string;
+}
+
+interface HasAge {
+    age: number;
+}
+
+type HasNameAndAge = HasName & HasAge;
+
+const thing: HasNameAndAge = {
+    
+};`
+
+    compilerOptions = {
+      noImplicitAny: true,
+    }
+  </script>
+  <script async src="../typescript-sandbox.js"></script>
+</html>
