@@ -9,18 +9,19 @@
     initialCode =
 `interface Pokemon {
     name: string;
-    element: string;
-    equipment: { name: string; power: number };
+    element: string | null;
+    favoriteFood: string | null;
+    level: number | null;
 }
 
-const pikachu: Readonly<Pokemon> = {
+type PokemonComplete = NonNullable<Pokemon>;
+
+const pokemon: PokemonComplete = {
     name: 'Pikachu',
     element: 'Electric',
-    equipment: { name: '.44 Magnum', power: 1000 }
-}
-
-pikachu.name = 'Balbasaur';
-pikachu.equipment.name = 'Katana';`
+    favoriteFood: 'Mee Goreng',
+    level: 99
+};`
 
     compilerOptions = {
       noImplicitAny: false,

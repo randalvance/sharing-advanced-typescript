@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <div id="loader">Loading...</div>
+  <div id="typescript-editor" style="height: 550px" />
+  <script>
+    initialCode =
+`interface User {
+    _id: number;
+    name: string;
+    email: string;
+    sensitiveInfo: string;
+}
+
+type SafeUser = Omit<User, '_id' | 'sensitiveInfo'>;
+
+const user: SafeUser = {
+    name: "John",
+    email: "john@example.com"
+};
+`
+    sandboxFontSize = 24;
+  </script>
+  <script async src="../typescript-sandbox.js"></script>
+</html>

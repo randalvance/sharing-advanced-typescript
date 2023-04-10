@@ -9,22 +9,20 @@
     initialCode =
 `interface Pokemon {
     name: string;
-    element: string;
-    equipment: { name: string; power: number };
 }
 
-const pikachu: Readonly<Pokemon> = {
-    name: 'Pikachu',
-    element: 'Electric',
-    equipment: { name: '.44 Magnum', power: 1000 }
+interface LegendaryPokemon extends Pokemon {
 }
 
-pikachu.name = 'Balbasaur';
-pikachu.equipment.name = 'Katana';`
+interface TalkingPokemon extends Pokemon {
+}
 
-    compilerOptions = {
-      noImplicitAny: false,
-    }
+interface Animal {
+}
+
+type Creature = Animal | LegendaryPokemon | TalkingPokemon;
+
+type PokemonOnly = Extract<Creature, Pokemon>;`
 
     sandboxFontSize = 20;
   </script>
