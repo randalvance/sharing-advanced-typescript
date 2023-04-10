@@ -7,18 +7,27 @@
   <div id="typescript-editor" style="height: 550px" />
   <script>
     initialCode =
-`function doSomething(value) {
-    console.log(value.length);
+`interface Pokemon {
+    name: string;
+    element: string;
+    skills: { name: string; power: number }[];
 }
 
-doSomething('hello');
-`
+const pikachu: Readonly<Pokemon> = {
+    name: 'Pikachu',
+    element: 'Electric',
+    skills: [{ name: 'Quick Attack', power: 100 }]
+};
+
+pikachu.name = 'Balbasaur';
+
+pikachu.skills[0].name = 'Vine Whip';`
 
     compilerOptions = {
       noImplicitAny: false,
     }
 
-    sandboxFontSize = 24;
+    sandboxFontSize = 20;
   </script>
   <script async src="../typescript-sandbox.js"></script>
 </html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <div id="loader">Loading...</div>
+  <div id="typescript-editor" style="height: 550px" />
+  <script>
+    initialCode =
+`interface Pokemon {
+    name: string;
+    element: string;
+    skills: string[];
+}
+
+function createPokemon(overrideValues: Partial<Pokemon>) {
+    return {
+        name: 'Unknown',
+        element: 'Unknown',
+        skills: [],
+        ...overrideValues
+    }
+}
+
+const pokemon1 = createPokemon({ name: 'Pikachu' });
+const pokemon2 = createPokemon({ name: "Squirtle", element: "Water" });`
+
+    compilerOptions = {
+      noImplicitAny: false,
+    }
+
+    sandboxFontSize = 20;
+  </script>
+  <script async src="../typescript-sandbox.js"></script>
+</html>

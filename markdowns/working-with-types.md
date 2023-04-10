@@ -1,25 +1,18 @@
 # Working with Types
 ---
-## Optional Properties
-<iframe class="editor" style="height: 600px" data-src="code-examples/working-with-types/optional-properties.html"></iframe>
-Note:
-1. We use the `?` to make a property optional.
-1. Using the `?` and indicating `| undefined` has different behavior. The latter needs to be explicitly assigned to undefined.
-
----
 ## Unions
 <iframe class="editor" style="height: 600px" data-src="code-examples/working-with-types/unions-001.html"></iframe>
 Note:
 1. Show the example of the union type. Create a variable using the union type and show that you can assign different values.
 1. Show the example again of an infered union type.
----
+vvv
 
 ## Unions (Part 2)
 <iframe class="editor" style="height: 600px" data-src="code-examples/working-with-types/unions-002.html"></iframe>
 
 Note:
 Doing a union of objects.
----
+vvv
 
 ## Unions (Part 3)
 <iframe class="editor" style="height: 600px" data-src="code-examples/working-with-types/unions-003.html"></iframe>
@@ -30,6 +23,13 @@ A union where both types have a property but different type.
 ---
 ## Unions (Arrays)
 <iframe class="editor" style="height: 600px" data-src="code-examples/working-with-types/unions-arrays.html"></iframe>
+
+---
+## Optional Properties
+<iframe class="editor" style="height: 600px" data-src="code-examples/working-with-types/optional-properties.html"></iframe>
+Note:
+1. We use the `?` to make a property optional.
+1. Using the `?` and indicating `| undefined` has different behavior. The latter needs to be explicitly assigned to undefined.
 
 ---
 ## Intersections

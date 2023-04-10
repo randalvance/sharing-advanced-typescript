@@ -102,11 +102,15 @@ Create a type for the object named `User` and annotate the user object.
 <iframe class="editor" style="height: 600px" data-src="code-examples/intro/array-types.html"></iframe>
 
 Note:
+Show type inference.
+
 Show annotating the array type.
 ---
 ## Function Types
 <iframe class="editor" style="height: 600px" data-src="code-examples/intro/function-types.html"></iframe>
 Note:
+Show type inference.
+
 Show annotating the function type.
 
 Show adding the function type in a `type`.
@@ -139,11 +143,3 @@ They are commonly used as return values of a function so you can destructure it.
     1. When you derived a type from another type (type mapping)
 Note:
 Declaration merging will be demonstrated later.
-
----
-## Structural Typing
-<iframe class="editor" style="height: 600px" data-src="code-examples/intro/structural-typing.html"></iframe>
-Note:
-You can assign an object with extra properties (as long as you don't explicitly typed the object).
-
-Structural and duck typing are similar concepts, but structural typing is checked by the type system, while duck typing is checked at runtime.
