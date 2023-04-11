@@ -7,9 +7,7 @@
   <div id="typescript-editor" style="height: 550px" />
   <script>
     initialCode =
-`type StringOrNumber = string | number;
-
-function doSomeMagic(value: StringOrNumber) {
+`function doSomeMagic(value: string | number) {
   if (typeof value === 'string') {
     console.log(value.toUpperCase());
   } else {

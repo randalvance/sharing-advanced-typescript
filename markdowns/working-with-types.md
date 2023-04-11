@@ -85,6 +85,8 @@ The `typeof` operator returns the type of a given object as a string.
 
 The first if block detects that the variable is a string while the else block narrows it down to just an int cause there's no more block after it.
 
+What happens when you add additional type on the union?
+
 What happens if you put an extra else block, the type will be `never`.
 
 ---
