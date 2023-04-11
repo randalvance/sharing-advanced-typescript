@@ -7,22 +7,10 @@
   <div id="typescript-editor" style="height: 550px" />
   <script>
     initialCode =
-`interface LinkedNode<T> {
-    next?: LinkedNode<T>;
-    value: T;
-}
+`type Nullable<T> = T | null;
 
-function getLast<T>(node: LinkedNode<T>): T {
-    return node.next ? getLast(node.next) : node.value;
-}
-
-const node: LinkedNode<string> = {
-    value: "test"
-};
-
-const value = getLast(node);`
-
-    sandboxFontSize = 24;
+let nullableNumber: Nullable<number> = 100;
+nullableNumber = null;`
   </script>
   <script async src="../typescript-sandbox.js"></script>
 </html>

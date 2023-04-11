@@ -7,12 +7,12 @@
   <div id="typescript-editor" style="height: 550px" />
   <script>
     initialCode =
-`function isNumberOrString(value: string | number) {
+`function isString(value: string | number) {
     return typeof value === 'string';
 }
 
 function doSomething(value: string | number) {
-    if (isNumberOrString(value)) {
+    if (isString(value)) {
         console.log(value);
     } else {
         console.log(value);

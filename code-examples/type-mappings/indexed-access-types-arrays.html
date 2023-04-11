@@ -7,8 +7,8 @@
   <div id="typescript-editor" style="height: 550px" />
   <script>
     initialCode =
-`type StrArray = string[];
-type StrElement = StrArray[1000];
+`const numbers = [1, 2, 3, 4, 5];
+type NumberItem = (typeof numbers)[1000];
 
 const values1 = [1, 3, 'a', true];
 type Values1Element = (typeof values1)[1];

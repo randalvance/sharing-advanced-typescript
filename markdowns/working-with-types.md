@@ -90,8 +90,8 @@ What happens when you add additional type on the union?
 What happens if you put an extra else block, the type will be `never`.
 
 ---
-## Type Narrowing (with conditions)
-<iframe class="editor" style="height: 600px" data-src="code-examples/working-with-types/type-narrowing-001.html"></iframe>
+## Type Narrowing (check for property)
+<iframe class="editor" style="height: 600px" data-src="code-examples/working-with-types/type-narrowing-002.html"></iframe>
 
 ---
 ## Discriminated Unions
@@ -140,7 +140,7 @@ Show an example of converting a string to a number. You can bypass that by addin
 
 ---
 ## The `any` Type
-<iframe class="editor" style="height: 600px" data-src="code-examples/working-with-types/any-type.html"></iframe>
+<iframe class="editor" style="height: 600px" data-src="https://www.typescriptlang.org/play?noImplicitAny=false#code/GYVwdgxgLglg9mABAEzgZTgWwKZQBYxgDmAFAG4CGANiNgJSIDeAUIm4hAgM5xXYB0VOKUo0BfYvjoBuZgF9mzVBhz5CpAOR5sVIRpnMgA"></iframe>
 
 Note:
 It is considered a top-level type. Any value can be assigned to it.
